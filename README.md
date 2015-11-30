@@ -2,6 +2,8 @@
 A thin wrapper around AWS's [DynamoDBLocal](http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Tools.DynamoDBLocal.html)
 to make using it in unit tests a bit simpler.
 
+[![Build][circleci-image]][circleci-url]
+
 ## Install
 
 ```
@@ -117,3 +119,6 @@ localdb.start(function (err) {
     localdb.stop();
 });
 ```
+
+[circleci-image]: https://img.shields.io/circleci/project/benblair/ddb-local.svg
+[circleci-url]: https://circleci.com/gh/benblair/ddb-local
