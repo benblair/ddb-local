@@ -1,0 +1,35 @@
+{
+  "name": "ddb-local",
+  "version": "0.1.0",
+  "description": "A thin wrapper around AWS's DynamoDB-Local to make using it in unit tests a bit simpler.",
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_ENV=test mocha --timeout 30000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benblair/ddb-local.git"
+  },
+  "keywords": [
+    "DynamoDB",
+    "DynamoDB-Local",
+    "AWS",
+    "test"
+  ],
+  "author": "Ben Blair",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/benblair/ddb-local/issues"
+  },
+  "homepage": "https://github.com/benblair/ddb-local#readme",
+  "devDependencies": {
+    "mocha": "^2.3.4"
+  },
+  "dependencies": {
+    "async": "^1.5.0",
+    "aws-sdk": "^2.2.19",
+    "mkdirp": "^0.5.1",
+    "request": "^2.67.0",
+    "tar": "^2.2.1"
+  }
+}
