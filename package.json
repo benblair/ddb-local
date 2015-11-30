@@ -1,6 +1,6 @@
 {
   "name": "ddb-local",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A thin wrapper around AWS's DynamoDB-Local to make using it in unit tests a bit simpler.",
   "main": "index.js",
   "scripts": {
