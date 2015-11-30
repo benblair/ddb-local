@@ -72,6 +72,8 @@ params `new DdbLocal(options)`
 by setting `DEFAULT_DOWNLOAD_PATH` env var
 - Port for DynamoDBLocal to listen on. Set with `options.port` or `DDB_PORT`
 - Endpoint for DynamoDBLocal to use. Overrides the Port option. Set with `AWS_DDB_ENDPOINT`
+- Whether to store data in memory (default) or files. Set `options.inMemory=false` 
+or `DDB_LOCAL_IN_MEMORY=false` to use files.
 
 #### Self-contained Example (no test framework)
 
@@ -120,6 +122,7 @@ localdb.start(function (err) {
     localdb.stop();
 });
 ```
+
 [npm-image]: https://img.shields.io/npm/v/ddb-local.svg
 [npm-url]: https://npmjs.org/package/ddb-local
 [circleci-image]: https://img.shields.io/circleci/project/benblair/ddb-local.svg
