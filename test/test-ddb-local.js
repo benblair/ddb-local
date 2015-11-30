@@ -72,12 +72,26 @@ describe('LocalDdb', function () {
     describe('#stop', function () {
         it('should stop DynamoDBLocal', function (done) {
             localdb.stop(function (err) {
-                console.log('stopped');
                 assert.ifError(err);
                 localdb.isRunning(function(err, isRunning) {
                     assert.ifError(err);
                     assert.equal(false, isRunning);
                     done();
+                });
+            });
+        });
+    });
+    describe('#inMemory', function () {
+        it('should start DynamoDBLocal with inMemory set to false', function (done) {
+            localdb = new DdbLocal({
+                inMemory: false
+            });
+            localdb.start(function (err) {
+                assert.ifError(err);
+                localdb.isRunning(function(err, isRunning) {
+                    assert.ifError(err);
+                    assert.equal(true, isRunning);
+                    localdb.stop(done);
                 });
             });
         });
